@@ -1,0 +1,39 @@
+html {
+  margin: 0;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+}
+
+svg {
+  margin-top: 50px;
+  margin-left: 20px;
+  display: block;
+}
+
+#headerContent {
+  text-align: center;
+}
+
+#organizeData {
+  margin-top: 20px;
+  background-color: lightblue;
+  height: 50px;
+  width: 100px;
+  border: white;
+  border-radius: 5px;
+  color: white;
+}
+
+
+#scatterData {
+  margin-top: 20px;
+  background-color: lightblue;
+  height: 50px;
+  width: 100px;
+  border: white;
+  border-radius: 5px;
+  color: white;
+}
