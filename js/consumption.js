@@ -1,9 +1,15 @@
-/* global d3, r */
+/* global d3*/
 
 var r = 10;
 var width = 750;
 var height = 500;
 var infoBoxWidth = ((window.innerWidth/2 - width/2)/window.innerWidth)*100 +'%';
+var steps_x = 100;
+var steps_y = 28;
+var x = d3.scale.linear().domain([0, steps_x]);
+var y = d3.scale.linear().domain([0, steps_y]);
+
+
 
 d3.select('#infoBox').style({
   'left': infoBoxWidth
@@ -24,9 +30,11 @@ var circleColor = function(d) {
 d3.csv("js/AlcoholConsumptionByCountry.csv", function(csv){
 
   csv.sort();
-  var circles = d3.select('svg').selectAll('circle').data(csv)
+  var circles = d3.select('svg').selectAll('circle').data(csv);
 
-
+    csv.sort(function(a,b){
+      return b.Total - a.Total;
+    });
     circles.enter().append('circle').attr({
       r: 0,
       cx: function(){ return Math.random() * width;},
@@ -36,9 +44,10 @@ d3.csv("js/AlcoholConsumptionByCountry.csv", function(csv){
     .transition()
     .duration(4000)
     .attr({
-      r: function(d){return d.Total* 1.5;},
+      value: function(d){ return d.Country;},
+      r: function(d){return d.Total* 3;},
       cx: function(d){
-        var x = (d.Total/18.22 * width)*.90;
+        var x = (d.Total/18.22 * width)* 0.90;
         return x;
       },
       cy: function(d){
@@ -55,11 +64,32 @@ d3.csv("js/AlcoholConsumptionByCountry.csv", function(csv){
       var Total = d.Total;
       var Wine = d.Wine;
       var Beer = d.Beer;
+      var Spirits = d.Spirits;
+      var Other = d.Other;
 
       d3.select('#Country').text('Country: '+Country);
-      d3.select('#Total').text('Total Consumption: ' +Total);
-      d3.select('#Wine').text('Wine Consumption: ' +Wine);
-      d3.select('#Beer').text('Beer Consumption: ' +Beer);
+      d3.select('#Total').text('Total Consumption: ' +Total+ ' Litres');
+      d3.select('#Wine').text('Wine Consumption: ' +Wine+ ' Litres');
+      d3.select('#Beer').text('Beer Consumption: ' +Beer+ ' Litres');
+      d3.select('#Spirits').text('Spirits Consumption: ' +Spirits+ ' Litres');
+      d3.select('#Other').text('Other Consumption: ' +Other+ ' Litres');
+    });
+
+    var fisheye = d3.fisheye.circular()
+      .radius(200)
+      .distortion(2);
+
+
+    d3.selectAll('circle').on('mouseover', function(){
+      d3.select(this).attr({
+        transform: function(d, i){ return 'translate(-10, -10)';}
+      });
+    });
+
+    d3.selectAll('circle').on('mouseout', function(){
+      d3.select(this).attr({
+        transform: function(d, i){ return 'translate(10, 10)';}
+      });
     });
 
 });
@@ -91,9 +121,9 @@ d3.select('#organizeData')
     .transition()
     .duration(1000)
     .attr({
-      r: function(d){return d.Total* 1.5;},
+      r: function(d){return d.Total* 3;},
       cx: function(d){
-        var x = (d.Total/18.22 * width)*.90;
+        var x = (d.Total/18.22 * width)* 0.90;
         return x;
       },
       cy: function(d){
@@ -116,11 +146,13 @@ d3.select('#scatterData')
   });
 
 var lineupY = function(d){
-  return d.Total * (height/40);
+  var y =  (height/1.5) - (+d.Total*3);
+  return y;
 };
 
 var lineupX = function(d){
-  return d.Total * (width/40);
+  var x =  18.22/+d.Total + (+d.Total);
+  return x;
 };
 
 d3.select('#lineupData')
