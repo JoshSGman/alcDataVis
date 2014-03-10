@@ -3,17 +3,26 @@
 var r = 10;
 var width = 750;
 var height = 500;
-var infoBoxWidth = ((window.innerWidth/2 - width/2)/window.innerWidth)*100 +'%';
-var steps_x = 100;
-var steps_y = 28;
-var x = d3.scale.linear().domain([0, steps_x]);
-var y = d3.scale.linear().domain([0, steps_y]);
+var infoBoxWidth = function(){
+  return ((window.innerWidth/2 - width/2)/window.innerWidth)*100 +'%';
+};
 
 
-
+// infoBox position 
 d3.select('#infoBox').style({
-  'left': infoBoxWidth
+  'left': infoBoxWidth()
 });
+
+// infoBox position on resize 
+var resize = function(){
+  d3.select('#infoBox').style({
+    'left': infoBoxWidth()
+  });
+
+};
+
+window.onresize = resize;
+
 
 d3.select('body').selectAll('svg').data([1])
   .enter().append('svg').style({
@@ -56,6 +65,7 @@ d3.csv("js/AlcoholConsumptionByCountry.csv", function(csv){
       fill: function(d){return circleColor(d);},
       stroke: 'black'
     });
+    // call drag on data-circles
     d3.selectAll('circle').call(drag);
 
     circles.on('mouseover', function(d){
@@ -80,21 +90,21 @@ d3.csv("js/AlcoholConsumptionByCountry.csv", function(csv){
       .distortion(2);
 
 
-    d3.selectAll('circle').on('mouseover', function(){
-      d3.select(this).attr({
-        transform: function(d, i){ return 'translate(-10, -10)';}
-      });
-    });
+    // d3.selectAll('circle').on('mouseover', function(){
+    //   d3.select(this).attr({
+    //     transform: function(d, i){ return 'translate(4, 4)';}
+    //   });
+    // });
 
-    d3.selectAll('circle').on('mouseout', function(){
-      d3.select(this).attr({
-        transform: function(d, i){ return 'translate(10, 10)';}
-      });
-    });
+    // d3.selectAll('circle').on('mouseout', function(){
+    //   d3.select(this).attr({
+    //     transform: function(d, i){ return 'translate(-4, -4)';}
+    //   });
+    // });
 
 });
 
-
+// set up drag
 
 var dragMove = function(){
   var rad = this.getAttribute('r');
@@ -115,6 +125,7 @@ var dragMove = function(){
 var drag = d3.behavior.drag()
   .on('drag', dragMove);
 
+// organize data-circles on click
 d3.select('#organizeData')
   .on('click', function(){
     d3.selectAll('circle')
@@ -133,6 +144,8 @@ d3.select('#organizeData')
       stroke: 'black'
     });
   });
+
+// scatter the data-circles on click
 
 d3.select('#scatterData')
   .on('click', function(){
@@ -155,6 +168,7 @@ var lineupX = function(d){
   return x;
 };
 
+// lineup the data-circles on click
 d3.select('#lineupData')
   .on('click', function(){
     d3.selectAll('circle')
