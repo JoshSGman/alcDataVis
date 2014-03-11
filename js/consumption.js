@@ -1,19 +1,21 @@
 /* global d3*/
 
-var r = 10;
+
 var width = 750;
 var height = 500;
 var infoBoxWidth = function(){
   return ((window.innerWidth/2 - width/2)/window.innerWidth)*100 +'%';
 };
+var totalsArray = [];
+var cxValObj = {};
+var cyValObj = {};
 
-
-// infoBox position 
+// infoBox position
 d3.select('#infoBox').style({
   'left': infoBoxWidth()
 });
 
-// infoBox position on resize 
+// infoBox position on resize
 var resize = function(){
   d3.select('#infoBox').style({
     'left': infoBoxWidth()
@@ -51,10 +53,10 @@ d3.csv("js/AlcoholConsumptionByCountry.csv", function(csv){
       fill: 'white'
     })
     .transition()
-    .duration(4000)
+    .duration(1000)
     .attr({
       value: function(d){ return d.Country;},
-      r: function(d){return d.Total* 3;},
+      r: function(d){return d.Total* 2;},
       cx: function(d){
         var x = (d.Total/18.22 * width)* 0.90;
         return x;
@@ -68,8 +70,31 @@ d3.csv("js/AlcoholConsumptionByCountry.csv", function(csv){
     // call drag on data-circles
     d3.selectAll('circle').call(drag);
 
-    circles.on('mouseover', function(d){
-      var circ = d;
+    d3.selectAll('circle').each(function(d,i){
+      totalsArray.push(d.Total);
+    });
+
+    totalsArray.sort(function(a,b){
+      return b - a;
+    });
+
+  cxValObj[totalsArray[0]] = totalsArray[0]*2+20;
+  cyValObj[totalsArray[0]] = height/3;
+
+  for (var i = 1; i < totalsArray.length; i++){
+    var lastCX = cxValObj[+totalsArray[i-1]];
+    if (lastCX > 650) {
+      cyValObj[totalsArray[i]] = cyValObj[totalsArray[i-1]] + 100;
+      cxValObj[totalsArray[i]] = totalsArray[i]*2+ 20;
+    } else {
+      cyValObj[+totalsArray[i]] = cyValObj[+totalsArray[i-1]];
+      cxValObj[+totalsArray[i]] = cxValObj[+totalsArray[i-1]] + (+totalsArray[i-1]*2) +(+totalsArray[i]*2);
+    }
+  };
+
+  console.log(cxValObj);
+
+  circles.on('mouseover', function(d){
       var Country = d.Country;
       var Total = d.Total;
       var Wine = d.Wine;
@@ -84,23 +109,6 @@ d3.csv("js/AlcoholConsumptionByCountry.csv", function(csv){
       d3.select('#Spirits').text('Spirits Consumption: ' +Spirits+ ' Litres');
       d3.select('#Other').text('Other Consumption: ' +Other+ ' Litres');
     });
-
-    var fisheye = d3.fisheye.circular()
-      .radius(200)
-      .distortion(2);
-
-
-    // d3.selectAll('circle').on('mouseover', function(){
-    //   d3.select(this).attr({
-    //     transform: function(d, i){ return 'translate(4, 4)';}
-    //   });
-    // });
-
-    // d3.selectAll('circle').on('mouseout', function(){
-    //   d3.select(this).attr({
-    //     transform: function(d, i){ return 'translate(-4, -4)';}
-    //   });
-    // });
 
 });
 
@@ -132,7 +140,7 @@ d3.select('#organizeData')
     .transition()
     .duration(1000)
     .attr({
-      r: function(d){return d.Total* 3;},
+      r: function(d){return d.Total* 2;},
       cx: function(d){
         var x = (d.Total/18.22 * width)* 0.90;
         return x;
@@ -159,14 +167,16 @@ d3.select('#scatterData')
   });
 
 var lineupY = function(d){
-  var y =  (height/1.5) - (+d.Total*3);
-  return y;
+  return cyValObj[d.Total];
 };
 
+var cxArray = [];
+
 var lineupX = function(d){
-  var x =  18.22/+d.Total + (+d.Total);
-  return x;
+  return cxValObj[d.Total];
 };
+
+
 
 // lineup the data-circles on click
 d3.select('#lineupData')
