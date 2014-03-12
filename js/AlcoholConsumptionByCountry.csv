@@ -1,189 +1,1 @@
-Country,Total,Beer,Wine,Spirits,Other
- Afghanistan,0.02,0,0,0.01,0
- Albania,6.68,1.61,0.94,2.3,0.02
- Algeria,0.96,0.09,0.07,0,0.5
- Andorra,15.48,3.93,5.69,3.14,0
- Angola,5.4,1.81,1.37,1.12,0.41
- Antigua and Barbuda,7.22,2.67,1.7,5.04,0.09
- Argentina,10,2.49,4.62,0.52,0.2
- Armenia,11.35,1.05,0.39,0.65,9.36
- Australia,10.02,4.56,3.12,1.16,1.02
- Austria,13.24,6.7,4.1,1.6,0.4
- Azerbaijan,10.6,7,0.03,0.97,0
- Bahamas,8.76,3.99,1.55,5.27,0.23
- Bahrain,3.66,1.91,0.52,1.24,0
- Bangladesh,0.2,0,0,0,0
- Barbados,6.91,2.9,0.73,3.78,0.17
- Belarus,15.13,1.84,0.8,4.08,2.67
- Belgium,10.77,5.49,3.55,0.62,0.03
- Belize,6.07,3.89,0.13,1.78,0.01
- Benin,2.15,0.49,0.14,0.15,0.3
- Bhutan,0.55,0.21,0,0,0
- Bolivia,5.12,2.17,0.06,0.61,0
- Bosnia and Herzegovina,9.63,2.22,0.34,7.08,0
- Botswana,7.96,2.56,0.04,0,1.88
- Brazil,9.16,3.36,0.33,2.49,0.03
- Brunei,2.01,1.67,0.02,0.05,0
- Bulgaria,12.44,3.53,2.44,4.88,0.1
- Burkina Faso,6.98,0.41,0.09,0.42,3.77
- Burma,0.57,0.1,0,0.01,0.01
- Burundi,9.47,1.16,0.01,0,5.07
- Cambodia,4.77,0.74,0.02,1.21,0
- Cameroon,7.57,2.05,0.05,0,2.6
- Canada,9.77,4.1,1.5,2.1,0
- Cape Verde,4.96,0.36,1.99,0.14,0
- Central African Republic,3.35,0.21,0.02,0.03,1.37
- Chad,4.38,0.23,0.01,0.02,0.15
- Chile,8.55,2.03,2.59,2.16,0.04
- China,5.91,1.5,0.15,2.51,0.23
- Colombia,6.17,2.71,0.08,1.44,0.02
- Comoros,0.76,0.17,0.02,0.03,0
- Cook Islands,3.7,0.54,1.39,3.45,0
- Costa Rica,5.55,2.29,0.18,1.71,0.02
- Croatia,15.11,4.66,5.8,1.91,0.14
- Cuba,5.51,1.48,0.05,2.94,0.01
- Cyprus,9.26,3.25,2.97,2.95,0.12
- Czech Republic,16.45,10.14,2.33,3.59,0.39
- Democratic Republic of the Congo,3.3,0.32,0.01,0.02,1.67
- Denmark,13.37,5.06,4.43,1.78,0
- Djibouti,2.87,0.78,0.07,0.46,0
- Dominica,7.84,0.5,0.8,6.69,0.07
- Dominican Republic,6.41,2.69,0.14,2.92,0.01
- Ecuador,9.38,2.3,0.07,1.69,0
- Egypt,0.37,0.1,0.02,0.06,0
- El Salvador,3.61,0.88,0.04,1.57,0
- Equatorial Guinea,6.08,0.45,4.18,0,0
- Eritrea,1.54,0.56,0,0.25,0
- Estonia,15.57,5.53,1.09,9.19,0.43
- Ethiopia,4.02,0.19,0.01,0.13,0.25
- Federated States of Micronesia,5.5,1.43,1.31,0.6,0
- Fiji,2.43,1.46,0.02,0.58,0
- Finland,12.52,4.59,2.24,2.82,0.31
- France,13.66,2.31,8.14,2.62,0.17
- Gabon,9.32,5.38,0.8,1.69,0
- Gambia,3.39,0.19,0.06,0.04,2.07
- Georgia,6.4,0.76,0.83,2.56,0.02
- Germany,12.81,6.22,3.15,2.3,0
- Ghana,2.97,0.4,0.07,0.03,0.97
- Greece,10.75,2.2,4.51,2.38,0.13
- Grenada,10.35,3.16,0.42,7.15,0.04
- Guatemala,4.03,1.12,3.92,1.2,0.05
- Guinea,0.36,0.14,0.02,0.06,0
- Guinea-Bissau,3.68,0.24,0.66,0.53,1.75
- Guyana,9.5,1.14,0.31,5.7,0.01
- Haiti,6.61,0.01,0.01,5.2,0
- Honduras,4.48,1.29,0.04,1.87,0
- Hungary,16.27,4.42,4.94,3.02,0.14
- Iceland,6.31,3.67,1.95,1.33,0.1
- India,0.75,0.06,0.02,0.05,0
- Indonesia,0.59,0.06,0,0,0
- Iran,1.02,0.02,0,0,0
- Iraq,0.4,0.14,0,0.07,0
- Ireland,14.41,7.04,2.75,2.51,1.09
- Israel,2.89,0.97,0.18,1.3,0.04
- Italy,10.68,1.73,6.38,0.42,0
- Ivory Coast,6.48,0.61,0.33,0.05,3.55
- Jamaica,5,1.49,0.11,1.8,0.1
- Japan,8.03,1.72,0.29,3.37,2.61
- Jordan,0.71,0.04,0.01,0.34,0.01
- Kazakhstan,10.96,1.69,0.3,4.19,0.01
- Kenya,4.14,0.84,0.02,0.51,0.55
- Kiribati,3.71,1.56,0.02,0.02,0
- Kuwait,0.17,0,0,0,0
- Kyrgyzstan,5.09,0.45,0.1,2.26,0.01
- Laos,6.73,1.42,0.03,4.35,0
- Latvia,12.5,3.61,1.1,6.24,0.1
- Lebanon,2.23,0.36,0.56,0.78,0.01
- Lesotho,5.55,1.24,0,0.01,0.69
- Liberia,5.06,0.3,0.01,3.16,0.01
- Libya,0.11,0,0,0,0
- Lithuania,15.03,5.6,1.8,4.5,0.6
- Luxembourg,13.01,1.59,8.16,2,0
- Macedonia,8.51,2.11,1.62,2.08,0
- Madagascar,1.33,0.34,0.11,0.32,0
- Malawi,1.74,0.14,0,0.22,0.74
- Malaysia,0.82,0.38,0.02,0.08,0
- Mali,1.04,0.07,0,0.01,0.46
- Malta,4.27,1.79,1.45,1.86,0.15
- Mauritania,0.11,0,0,0.01,0
- Mauritius,3.72,1.92,0.32,0.39,0
- Mexico,8.42,3.96,0.02,1.09,0.03
- Moldova,18.22,4.57,4.67,4.42,4.56
- Mongolia,3.24,0.39,0.11,0.67,0.21
- Morocco,1.46,0.23,0.17,0.06,0
- Mozambique,2.56,0,0,0.27,1.08
- Namibia,9.62,4.35,0.48,1.3,0.35
- Nauru,4.83,2.24,0.08,0,0
- Nepal,9.48,1.15,0,0.07,0
- Netherlands,10.05,4.72,3.26,1.56,0
- New Zealand,9.62,4.09,3.04,1.37,0.81
- Nicaragua,5.37,1.13,0.03,2.55,0
- Niger,0.34,0.05,0.01,0.03,0
- Nigeria,12.28,0.54,0.01,0.02,9.17
- Niue,9.85,4.63,0.11,2.95,0
- Norway,7.81,2.98,2,1.28,0.11
- Oman,0.94,0.27,0,0.39,0
- Pakistan,0.06,0,0,0,0.01
- Palau,10.1,8.68,0.52,2.1,0
- Panama,6.85,3.71,0.22,1.91,0.01
- Papua New Guinea,3.49,0.57,0.02,0.9,0
- Paraguay,7.88,3.48,0.97,1.77,0.19
- Peru,6.9,2.16,0.32,0.61,0
- Philippines,6.38,1.29,0.02,2.91,0
- Poland,13.25,5.27,1.23,2.97,0
- Portugal,14.55,3.75,6.65,1.27,0.51
- Puerto Rico,5.75,3.68,0.34,1.35,0.05
- Qatar,1.25,0.04,0.11,0.73,0.01
- Republic of the Congo,4.2,1.76,0,0.11,0.12
- Romania,15.3,4.07,2.33,4.14,0
- Russia,13.5,3.65,0.1,6.88,0.34
- Rwanda,9.8,0.54,0,0.01,6.44
- Saint Kitts and Nevis,9.43,3.98,0.18,6,0.1
- Saint Lucia,11.85,3.49,0.71,8.21,0.31
- Saint Vincent and the Grenadines,5.44,2.55,0.12,3.16,0.05
- Samoa,4.8,3.31,0.08,0.24,0
- São Tomé and Príncipe,8.74,1.12,3.4,0.83,0
- Saudi Arabia,0.25,0,0,0.05,0
- Senegal,0.6,0.15,0.12,0.01,0
- Serbia,11.09,4.4,2.21,3.42,0.04
- Seychelles,10.59,7.15,3.15,1.59,0
- Sierra Leone,9.72,0.46,0.01,0.02,6.06
- Singapore,1.55,1.45,0.25,0.4,0
- Slovakia,13.33,3.9,1.7,5.4,0
- Slovenia,15.19,4.1,5.1,1.33,0
- Solomon Islands,1.66,0.66,0.03,0.4,0
- Somalia,0.1,0,0,0,0
- South Africa,9.46,3.93,1.17,1.15,0.75
- South Korea,14.8,2.14,0.06,9.57,0.04
- Spain,11.62,4.52,3.59,1.31,0.61
- Sri Lanka,0.79,0.02,0,0.33,0
- Sudan,2.38,0.52,0.09,0.79,0.05
- Suriname,6.09,2,0.13,3.26,0.05
- Swaziland,5.7,1.64,0.21,0.15,3.05
- Sweden,10.3,2.6,2.9,1.1,0
- Switzerland,11.06,3.1,5.1,1.8,0.1
- Syria,1.43,0.04,0.32,0.69,0
- Tajikistan,3.39,0.08,0.02,0.29,0
- Tanzania,6.75,0.57,0.02,0.15,4.51
- Thailand,7.08,1.75,0.02,4.69,0
- Timor-Leste,0.86,0.3,0.01,0,0
- Togo,1.99,0.43,0.32,0.06,0.22
- Tonga,3.78,0.89,2.29,0.64,0.18
- Trinidad and Tobago,6.28,3.1,0.11,2.78,0.04
- Tunisia,1.29,0.67,0.34,0.04,0
- Turkey,2.87,0.78,0.07,0.46,0
- Turkmenistan,4.63,0.21,0.9,1.22,0
- Tuvalu,2.44,0.71,0.02,0.58,0
- Uganda,11.93,0.51,0,0.18,14.52
- Ukraine,15.6,2.69,0.58,5.21,0.02
- United Arab Emirates,0.54,0.3,0.01,0,0.02
- United Kingdom,13.37,4.93,3.53,2.41,0.67
- United States,9.44,4.47,1.36,2.65,0
- Uruguay,8.14,1.33,3.95,1.21,0.06
- Uzbekistan,3.54,0.28,0.19,1.3,0
- Vanuatu,0.93,0.46,0.19,0.19,0
- Venezuela,8.23,5.19,0.07,1.65,0
- Vietnam,3.77,1.13,0.01,0.02,0
- Yemen,0.02,0,0,0,0
- Zambia,3.85,0.42,0.01,0.27,1.62
- Zimbabwe,5.08,0.96,0.19,0.06,2.61
+Country,Total,Beer,Wine,Spirits,Other,ContinentAfghanistan,0.02,0,0,0.01,0,AsiaAlbania,6.68,1.61,0.94,2.3,0.02,EuropeAlgeria,0.96,0.09,0.07,0,0.5,AfricaAndorra,15.48,3.93,5.69,3.14,0,EuropeAngola,5.4,1.81,1.37,1.12,0.41,AfricaAntigua and Barbuda,7.22,2.67,1.7,5.04,0.09,North AmericaArgentina,10,2.49,4.62,0.52,0.2,South AmericaArmenia,11.35,1.05,0.39,0.65,9.36,AsiaAustralia,10.02,4.56,3.12,1.16,1.02,AustraliaAustria,13.24,6.7,4.1,1.6,0.4,EuropeAzerbaijan,10.6,7,0.03,0.97,0,AsiaBahamas,8.76,3.99,1.55,5.27,0.23,North AmericaBahrain,3.66,1.91,0.52,1.24,0,AsiaBangladesh,0.2,0,0,0,0,AsiaBarbados,6.91,2.9,0.73,3.78,0.17,North AmericaBelarus,15.13,1.84,0.8,4.08,2.67,EuropeBelgium,10.77,5.49,3.55,0.62,0.03,EuropeBelize,6.07,3.89,0.13,1.78,0.01,North AmericaBenin,2.15,0.49,0.14,0.15,0.3,AfricaBhutan,0.55,0.21,0,0,0,AsiaBolivia,5.12,2.17,0.06,0.61,0,South AmericaBosnia and Herzegovina,9.63,2.22,0.34,7.08,0,EuropeBotswana,7.96,2.56,0.04,0,1.88,AfricaBrazil,9.16,3.36,0.33,2.49,0.03,South AmericaBrunei,2.01,1.67,0.02,0.05,0,AsiaBulgaria,12.44,3.53,2.44,4.88,0.1,EuropeBurkina Faso,6.98,0.41,0.09,0.42,3.77,AfricaBurma,0.57,0.1,0,0.01,0.01,AsiaBurundi,9.47,1.16,0.01,0,5.07,AfricaCambodia,4.77,0.74,0.02,1.21,0,AsiaCameroon,7.57,2.05,0.05,0,2.6,AfricaCanada,9.77,4.1,1.5,2.1,0,North AmericaCape Verde,4.96,0.36,1.99,0.14,0,AfricaCentral African Republic,3.35,0.21,0.02,0.03,1.37,AfricaChad,4.38,0.23,0.01,0.02,0.15,AfricaChile,8.55,2.03,2.59,2.16,0.04,South AmericaChina,5.91,1.5,0.15,2.51,0.23,AsiaColombia,6.17,2.71,0.08,1.44,0.02,South AmericaComoros,0.76,0.17,0.02,0.03,0,AfricaCook Islands,3.7,0.54,1.39,3.45,0,AustraliaCosta Rica,5.55,2.29,0.18,1.71,0.02,North AmericaCroatia,15.11,4.66,5.8,1.91,0.14,EuropeCuba,5.51,1.48,0.05,2.94,0.01,North AmericaCyprus,9.26,3.25,2.97,2.95,0.12,AsiaCzech Republic,16.45,10.14,2.33,3.59,0.39,EuropeDemocratic Republic of the Congo,3.3,0.32,0.01,0.02,1.67,AfricaDenmark,13.37,5.06,4.43,1.78,0,EuropeDjibouti,2.87,0.78,0.07,0.46,0,AfricaDominica,7.84,0.5,0.8,6.69,0.07,North AmericaDominican Republic,6.41,2.69,0.14,2.92,0.01,South AmericaEcuador,9.38,2.3,0.07,1.69,0,South AmericaEgypt,0.37,0.1,0.02,0.06,0,AfricaEl Salvador,3.61,0.88,0.04,1.57,0,North AmericaEquatorial Guinea,6.08,0.45,4.18,0,0,AfricaEritrea,1.54,0.56,0,0.25,0,AfricaEstonia,15.57,5.53,1.09,9.19,0.43,EuropeEthiopia,4.02,0.19,0.01,0.13,0.25,AfricaFederated States of Micronesia,5.5,1.43,1.31,0.6,0,AustraliaFiji,2.43,1.46,0.02,0.58,0,AustraliaFinland,12.52,4.59,2.24,2.82,0.31,EuropeFrance,13.66,2.31,8.14,2.62,0.17,EuropeGabon,9.32,5.38,0.8,1.69,0,AfricaGambia,3.39,0.19,0.06,0.04,2.07,AfricaGeorgia,6.4,0.76,0.83,2.56,0.02,EuropeGermany,12.81,6.22,3.15,2.3,0,EuropeGhana,2.97,0.4,0.07,0.03,0.97,AfricaGreece,10.75,2.2,4.51,2.38,0.13,EuropeGrenada,10.35,3.16,0.42,7.15,0.04,North AmericaGuatemala,4.03,1.12,3.92,1.2,0.05,North AmericaGuinea,0.36,0.14,0.02,0.06,0,AfricaGuinea-Bissau,3.68,0.24,0.66,0.53,1.75,AfricaGuyana,9.5,1.14,0.31,5.7,0.01,South AmericaHaiti,6.61,0.01,0.01,5.2,0,North AmericaHonduras,4.48,1.29,0.04,1.87,0,North AmericaHungary,16.27,4.42,4.94,3.02,0.14,EuropeIceland,6.31,3.67,1.95,1.33,0.1,EuropeIndia,0.75,0.06,0.02,0.05,0,AsiaIndonesia,0.59,0.06,0,0,0,AsiaIran,1.02,0.02,0,0,0,AsiaIraq,0.4,0.14,0,0.07,0,AsiaIreland,14.41,7.04,2.75,2.51,1.09,EuropeIsrael,2.89,0.97,0.18,1.3,0.04,AsiaItaly,10.68,1.73,6.38,0.42,0,EuropeIvory Coast,6.48,0.61,0.33,0.05,3.55,AfricaJamaica,5,1.49,0.11,1.8,0.1,North AmericaJapan,8.03,1.72,0.29,3.37,2.61,AsiaJordan,0.71,0.04,0.01,0.34,0.01,AsiaKazakhstan,10.96,1.69,0.3,4.19,0.01,AsiaKenya,4.14,0.84,0.02,0.51,0.55,AfricaKiribati,3.71,1.56,0.02,0.02,0,AustraliaKuwait,0.17,0,0,0,0,AsiaKyrgyzstan,5.09,0.45,0.1,2.26,0.01,AsiaLaos,6.73,1.42,0.03,4.35,0,AsiaLatvia,12.5,3.61,1.1,6.24,0.1,EuropeLebanon,2.23,0.36,0.56,0.78,0.01,AsiaLesotho,5.55,1.24,0,0.01,0.69,AfricaLiberia,5.06,0.3,0.01,3.16,0.01,AfricaLibya,0.11,0,0,0,0,AfricaLithuania,15.03,5.6,1.8,4.5,0.6,EuropeLuxembourg,13.01,1.59,8.16,2,0,EuropeMacedonia,8.51,2.11,1.62,2.08,0,EuropeMadagascar,1.33,0.34,0.11,0.32,0,AfricaMalawi,1.74,0.14,0,0.22,0.74,AfricaMalaysia,0.82,0.38,0.02,0.08,0,AsiaMali,1.04,0.07,0,0.01,0.46,AfricaMalta,4.27,1.79,1.45,1.86,0.15,EuropeMauritania,0.11,0,0,0.01,0,AfricaMauritius,3.72,1.92,0.32,0.39,0,AfricaMexico,8.42,3.96,0.02,1.09,0.03,North AmericaMoldova,18.22,4.57,4.67,4.42,4.56,EuropeMongolia,3.24,0.39,0.11,0.67,0.21,AsiaMorocco,1.46,0.23,0.17,0.06,0,AfricaMozambique,2.56,0,0,0.27,1.08,AfricaNamibia,9.62,4.35,0.48,1.3,0.35,AfricaNauru,4.83,2.24,0.08,0,0,AustraliaNepal,9.48,1.15,0,0.07,0,AsiaNetherlands,10.05,4.72,3.26,1.56,0,EuropeNew Zealand,9.62,4.09,3.04,1.37,0.81,AustraliaNicaragua,5.37,1.13,0.03,2.55,0,North AmericaNiger,0.34,0.05,0.01,0.03,0,AfricaNigeria,12.28,0.54,0.01,0.02,9.17,AfricaNiue,9.85,4.63,0.11,2.95,0,AustraliaNorway,7.81,2.98,2,1.28,0.11,EuropeOman,0.94,0.27,0,0.39,0,AsiaPakistan,0.06,0,0,0,0.01,AsiaPalau,10.1,8.68,0.52,2.1,0,AustraliaPanama,6.85,3.71,0.22,1.91,0.01,South AmericaPapua New Guinea,3.49,0.57,0.02,0.9,0,AustraliaParaguay,7.88,3.48,0.97,1.77,0.19,South AmericaPeru,6.9,2.16,0.32,0.61,0,South AmericaPhilippines,6.38,1.29,0.02,2.91,0,AsiaPoland,13.25,5.27,1.23,2.97,0,EuropePortugal,14.55,3.75,6.65,1.27,0.51,EuropePuerto Rico,5.75,3.68,0.34,1.35,0.05,North AmericaQatar,1.25,0.04,0.11,0.73,0.01,AsiaRepublic of the Congo,4.2,1.76,0,0.11,0.12,AfricaRomania,15.3,4.07,2.33,4.14,0,EuropeRussia,13.5,3.65,0.1,6.88,0.34,AsiaRwanda,9.8,0.54,0,0.01,6.44,AfricaSaint Kitts and Nevis,9.43,3.98,0.18,6,0.1,North AmericaSaint Lucia,11.85,3.49,0.71,8.21,0.31,South AmericaSaint Vincent and the Grenadines,5.44,2.55,0.12,3.16,0.05,South AmericaSamoa,4.8,3.31,0.08,0.24,0,AustraliaSao Tome and Principe,8.74,1.12,3.4,0.83,0,AfricaSaudi Arabia,0.25,0,0,0.05,0,AsiaSenegal,0.6,0.15,0.12,0.01,0,AfricaSerbia,11.09,4.4,2.21,3.42,0.04,EuropeSeychelles,10.59,7.15,3.15,1.59,0,AfricaSierra Leone,9.72,0.46,0.01,0.02,6.06,AfricaSingapore,1.55,1.45,0.25,0.4,0,AsiaSlovakia,13.33,3.9,1.7,5.4,0,EuropeSlovenia,15.19,4.1,5.1,1.33,0,EuropeSolomon Islands,1.66,0.66,0.03,0.4,0,AustraliaSomalia,0.1,0,0,0,0,AfricaSouth Africa,9.46,3.93,1.17,1.15,0.75,AfricaSouth Korea,14.8,2.14,0.06,9.57,0.04,AsiaSpain,11.62,4.52,3.59,1.31,0.61,EuropeSri Lanka,0.79,0.02,0,0.33,0,AsiaSudan,2.38,0.52,0.09,0.79,0.05,AfricaSuriname,6.09,2,0.13,3.26,0.05,South AmericaSwaziland,5.7,1.64,0.21,0.15,3.05,AfricaSweden,10.3,2.6,2.9,1.1,0,Europe Switzerland,11.06,3.1,5.1,1.8,0.1,EuropeSyria,1.43,0.04,0.32,0.69,0,AsiaTajikistan,3.39,0.08,0.02,0.29,0,AsiaTanzania,6.75,0.57,0.02,0.15,4.51,AfricaThailand,7.08,1.75,0.02,4.69,0,AsiaTimor-Leste,0.86,0.3,0.01,0,0,AustraliaTogo,1.99,0.43,0.32,0.06,0.22,AfricaTonga,3.78,0.89,2.29,0.64,0.18,AustraliaTrinidad and Tobago,6.28,3.1,0.11,2.78,0.04,South AmericaTunisia,1.29,0.67,0.34,0.04,0,AfricaTurkey,2.87,0.78,0.07,0.46,0,AsiaTurkmenistan,4.63,0.21,0.9,1.22,0,AsiaTuvalu,2.44,0.71,0.02,0.58,0,AustraliaUganda,11.93,0.51,0,0.18,14.52,AfricaUkraine,15.6,2.69,0.58,5.21,0.02,EuropeUnited Arab Emirates,0.54,0.3,0.01,0,0.02,AsiaUnited Kingdom,13.37,4.93,3.53,2.41,0.67,EuropeUnited States,9.44,4.47,1.36,2.65,0,North AmericaUruguay,8.14,1.33,3.95,1.21,0.06,South AmericaUzbekistan,3.54,0.28,0.19,1.3,0,AsiaVanuatu,0.93,0.46,0.19,0.19,0,AustraliaVenezuela,8.23,5.19,0.07,1.65,0,South AmericaVietnam,3.77,1.13,0.01,0.02,0,AsiaYemen,0.02,0,0,0,0,AsiaZambia,3.85,0.42,0.01,0.27,1.62,AfricaZimbabwe,5.08,0.96,0.19,0.06,2.61,Africa

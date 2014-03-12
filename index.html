@@ -5,25 +5,46 @@
   <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
   <link rel='stylesheet' href='css/main.css'>
 
-
 </head>
 <body>
 <div id="headerContent">
-  <input id="organizeData" type='button' value='Organize'/>
+  <input id="groupData" type='button' value='Group'/>
   <input id="scatterData" type='button' value='Scatter'/>
-  <input id="lineupData" type='button' value='Lineup'/>
+  <input id="totalData" type='button' value='Total'/>
+  <input id="wineData" type='button' value='Wine'/>
+  <input id="beerData" type='button' value='Beer'/>
+  <input id="spiritsData" type='button' value='Spirits'/>
   <div id="infoBox">
-    <span id="Country"></span>
+    <span id="Country">Country: </span>
     <br/>
-    <span id="Total"></span>
+    <span id="Total">Total Consumption: </span>
     <br/>
-    <span id="Wine"></span>
+    <span id="Wine">Wine Consumption: </span>
     <br/>
-    <span id="Beer"></span>
+    <span id="Beer">Beer Consumption: </span>
+    <br/>
+    <span id="Spirits">Spirits Consumption: </span>
+    <br/>
+    <span id="Other">Other Consumption: </span>
+    <br/>
+    <span id="Continent"></span>
+  </div>
+  <div id='instructions'>
+  </div>
+  <div id='legend'>
+    <h1>Legend</h1>
+    <h2>Circles Are Colored By Continent</h2>
+    <span>Europe:</span>
+    <span>North America: </span>
+    <span>South America: </span>
+    <span>Asia: </span>
+    <span>Africa: </span>
+    <span>Australia: </span>
   </div>
 </div>
 
 <script src='js/d3.js'></script>
+<script src='js/d3-plugins/fisheye/fisheye.js'></script>
 <script src='js/consumption.js'></script>
 </body>
 </html>

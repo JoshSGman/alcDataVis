@@ -9,7 +9,6 @@ body {
 }
 
 svg {
-  border: 1px solid black;
   margin-top: 30px;
   margin-left: 20px;
   display: block;
@@ -31,7 +30,42 @@ svg {
   font-family: 'Montserrat', sans-serif;
 }
 
-#organizeData {
+#instructions {
+  top: 225px;
+  padding: 5px;
+  width: 100px;
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+  position: absolute;
+}
+
+#legend{
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid black;
+  text-align: center;
+  top: 110px;
+  padding: 5px;
+  position: absolute;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#legend h1{
+  margin-bottom: -5px;
+}
+
+#legend h2 {
+  font-size: .5em;
+}
+
+#legend span {
+  margin-left: 5px;
+  font-size: .5em;
+  text-align: left;
+  display: block;
+}
+
+#groupData {
   margin-top: 10px;
   font-size: 1.25em;
   background-color: lightblue;
@@ -54,7 +88,40 @@ svg {
   color: white;
 }
 
-#lineupData {
+#totalData {
+  margin-top: 20px;
+  background-color: lightblue;
+  height: 50px;
+  width: 100px;
+  font-size: 1.25em;
+  border: white;
+  border-radius: 5px;
+  color: white;
+}
+
+#wineData {
+  margin-top: 20px;
+  background-color: lightblue;
+  height: 50px;
+  width: 100px;
+  font-size: 1.25em;
+  border: white;
+  border-radius: 5px;
+  color: white;
+}
+
+#beerData {
+  margin-top: 20px;
+  background-color: lightblue;
+  height: 50px;
+  width: 100px;
+  font-size: 1.25em;
+  border: white;
+  border-radius: 5px;
+  color: white;
+}
+
+#spiritsData {
   margin-top: 20px;
   background-color: lightblue;
   height: 50px;
