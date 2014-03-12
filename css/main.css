@@ -60,9 +60,14 @@ svg {
 
 #legend span {
   margin-left: 5px;
-  font-size: .5em;
+  font-size: .75em;
   text-align: left;
   display: block;
+}
+
+#legend img {
+  float: right;
+  margin-right: 40px;
 }
 
 #groupData {
