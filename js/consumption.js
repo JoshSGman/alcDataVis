@@ -1,17 +1,9 @@
 /* global d3*/
 
+// set base radius of circles, and width and height of svg
 var radius = 15;
 var width = 750;
-var height = 500;
-var infoBoxWidth = function(){
-  return ((window.innerWidth/2 - width/2)/window.innerWidth)*100+'%';
-};
-var instructionsWidth = function(){
-  return ((window.innerWidth/2 - width/2)/window.innerWidth)*100+'%';
-};
-var legendWidth = function(){
-  return ((window.innerWidth/2 + width/2)/window.innerWidth)*100-3+'%';
-};
+var height = 600;
 
 //Cx and Cy objects for Total Linear 
 var cxPosTotal = {};
@@ -28,19 +20,29 @@ var cyPosBeer = {};
 var cxPosSpirits = {};
 var cyPosSpirits = {};
 
+var infoBoxLeft = function(){
+  return ((window.innerWidth/2 - width/2)/window.innerWidth)*100+'%';
+};
+var instructionsLeft = function(){
+  return ((window.innerWidth/2 - width/2)/window.innerWidth)*100+'%';
+};
+var legendLeft = function(){
+  return ((window.innerWidth/2 + width/2)/window.innerWidth)*100-15+'%';
+};
+
 // infoBox position
 d3.select('#infoBox').style({
-  'left': infoBoxWidth()
+  'left': infoBoxLeft()
 });
 
 // instructions width
 d3.select('#instructions').style({
-  'left': instructionsWidth()
+  'left': instructionsLeft()
 });
 
 // Legend width
 d3.select('#legend').style({
-  'left': legendWidth()
+  'left': legendLeft()
 });
 
 // resize div on window resize
@@ -53,24 +55,28 @@ var resize = function(element, func){
 
 // functions on window resize
 window.onresize = function(){
-  resize('#infoBox', infoBoxWidth);
-  resize('#instructions', instructionsWidth);
-  resize('#legend', legendWidth);
+  resize('#infoBox', infoBoxLeft);
+  resize('#instructions', instructionsLeft);
+  resize('#legend', legendLeft);
 };
-
-
 
 
 // create positions function
 var createPositions = function(cx, cy, sortedCirc){
-  cx[0] = 30;
-  cy[0] = height/2.8;
+  cx[0] = 300;
+  cy[0] = 20;
   for (var i = 1; i < sortedCirc[0].length; i++){
     var lastPosition = cx[i-1];
     cx[i] = lastPosition + 35;
     cy[i] = cy[i-1];
-    if (cx[i] > (width-20)) {
-      cx[i] = 30;
+    if (cx[i] > (width-300) && cy[i] < 190) {
+      cx[i] = 300;
+      cy[i] = cy[i-1] + 35;
+    } else if (cx[i] > width-300 && cy[i] === 195) {
+      cx[i] = 100;
+      cy[i] = cy[i-1] + 35;
+    } else if (cx[i] > (width-100)) {
+      cx[i] = 100;
       cy[i] = cy[i-1] + 35;
     }
   }
@@ -79,7 +85,7 @@ var createPositions = function(cx, cy, sortedCirc){
 // sort by category and assign id
 var sortAndAssignId = function(collection, category) {
   collection.sort(function(a,b){
-    return b[category] - a[category];
+    return b[category] === a[category] ? 0 : b[category] - a[category];
   });
 
   var k = 0;
@@ -89,6 +95,26 @@ var sortAndAssignId = function(collection, category) {
   });
   return collection;
 };
+
+
+// function to dynamically sort the circles in the svg
+var sortData = function(cxPos, cyPos, category) {
+  d3.select('#instructions').text('');
+  sortedTotalCircles = sortAndAssignId(sortedCircles, category);
+  createPositions(cxPos, cyPos, sortedTotalCircles);
+  d3.selectAll('circle')
+  .transition()
+  .duration(1500)
+  .attr({
+    r : function(d){
+      var r = radius * (d[category]/8.16);
+      return r < 3 ? 3 : r;
+    },
+    cy: function(d){ return cyPos[d.id];},
+    cx: function(d){ return cxPos[d.id];}
+  });
+};
+
 
 
 // create SVG and give it a height and width
@@ -131,9 +157,9 @@ d3.csv("js/AlcoholConsumptionByCountry.csv", function(csv){
       fill: 'white'
     })
     .transition()
-    .duration(4000)
+    .duration(500)
     .attr({
-      r: function(d){return d.Total* 5;},
+      r: function(d){return radius;},
       cx: function(d){
         var x = width/2;
         return x;
@@ -175,7 +201,6 @@ d3.csv("js/AlcoholConsumptionByCountry.csv", function(csv){
 });
 
 // set up drag
-
 var dragMove = function(){
   var rad = this.getAttribute('r');
   var x = function(x){
@@ -195,15 +220,40 @@ var dragMove = function(){
 var drag = d3.behavior.drag()
   .on('drag', dragMove);
 
+// scatter the data-circles on click
+
+d3.select('#scatterData')
+  .on('click', function(){
+    d3.select('#instructions').text('');
+    d3.selectAll('circle')
+    .transition()
+    .duration(1500)
+    .attr({
+      cx: function(d){ 
+        var cx = Math.random() * width;
+        if ((cx + radius) > width) {
+          cx = cx - (radius*2);
+        } else if ((cx + radius) < 0){
+          cx = cx + (radius*2);
+        }
+        return cx;
+        },
+      cy: function(){ 
+        return Math.random() * height
+        }
+    });
+  });
+
+
 // organize data-circles on click
 d3.select('#groupData')
   .on('click', function(){
     d3.select('#instructions').text('Click on the circles to drag out countries');
     d3.selectAll('circle')
     .transition()
-    .duration(1000)
+    .duration(1500)
     .attr({
-      r: function(d){return d.Total* 5;},
+      r: function(d){return radius;},
       cx: function(d){
         var x = width/2;
         return x;
@@ -216,19 +266,6 @@ d3.select('#groupData')
     });
   });
 
-// scatter the data-circles on click
-
-d3.select('#scatterData')
-  .on('click', function(){
-    d3.select('#instructions').text('');
-    d3.selectAll('circle')
-    .transition()
-    .duration(1000)
-    .attr({
-      cx: function(){ return Math.random() * width;},
-      cy: function(){ return Math.random() * height;}
-    });
-  });
 
 
 // lineup the data-circles on click
@@ -239,7 +276,7 @@ d3.select('#totalData')
     createPositions(cxPosTotal, cyPosTotal, sortedTotalCircles);
     d3.selectAll('circle')
     .transition()
-    .duration(1000)
+    .duration(1500)
     .attr({
       r : function(d){
         var r = radius * (d.Total/18.22);
@@ -252,56 +289,20 @@ d3.select('#totalData')
 
 d3.select('#wineData')
   .on('click', function(){
-    d3.select('#instructions').text('');
-    sortedTotalCircles = sortAndAssignId(sortedCircles, 'Wine');
-    createPositions(cxPosWine, cyPosWine, sortedTotalCircles);
-    d3.selectAll('circle')
-    .transition()
-    .duration(1000)
-    .attr({
-      r : function(d){
-        var r = radius * (d.Wine/8.16);
-        return r < 3 ? 3 : r;
-      },
-      cy: function(d){ return cyPosWine[d.id];},
-      cx: function(d){ return cxPosWine[d.id];}
-    });
+    sortData(cxPosWine, cyPosWine, 'Wine');
   });
 
 d3.select('#beerData')
   .on('click', function(){
-    d3.select('#instructions').text('');
-    sortedTotalCircles = sortAndAssignId(sortedCircles, 'Beer');
-    createPositions(cxPosBeer, cyPosBeer, sortedTotalCircles);
-    d3.selectAll('circle')
-    .transition()
-    .duration(1000)
-    .attr({
-      r : function(d){
-        var r = radius * (d.Beer/8.16);
-        return r < 3 ? 3 : r;
-      },
-      cy: function(d){ return cyPosBeer[d.id];},
-      cx: function(d){ return cxPosBeer[d.id];}
-    });
+    sortData(cxPosBeer, cyPosBeer, 'Beer');
   });
 
 d3.select('#spiritsData')
   .on('click', function(){
-    d3.select('#instructions').text('');
-    sortedTotalCircles = sortAndAssignId(sortedCircles, 'Spirits');
-    createPositions(cxPosSpirits, cyPosSpirits, sortedTotalCircles);
-    d3.selectAll('circle')
-    .transition()
-    .duration(1000)
-    .attr({
-      r : function(d){
-        var r = radius * (d.Spirits/8.16);
-        return r < 3 ? 3 : r;
-      },
-      cy: function(d){ return cyPosSpirits[d.id];},
-      cx: function(d){ return cxPosSpirits[d.id];}
-    });
+    sortData(cxPosSpirits, cyPosSpirits, 'Spirits');
   });
+
+
+
 
 

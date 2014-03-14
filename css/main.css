@@ -40,17 +40,15 @@ svg {
 }
 
 #legend{
-  background-color: white;
-  border-radius: 5px;
-  border: 1px solid black;
   text-align: center;
-  top: 110px;
+  top: 100px;
   padding: 5px;
   position: absolute;
   font-family: 'Montserrat', sans-serif;
 }
 
 #legend h1{
+  margin-top: -8px;
   margin-bottom: -5px;
 }
 
@@ -66,6 +64,7 @@ svg {
 }
 
 #legend img {
+  margin-top: 5px;
   float: right;
   margin-right: 40px;
 }
