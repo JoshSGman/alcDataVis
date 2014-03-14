@@ -82,6 +82,32 @@ var createPositions = function(cx, cy, sortedCirc){
   }
 };
 
+// Spiral effect create positions
+var createSpiralPositions = function(cx, cy, sortedCirc) {
+  cx[0] = width/2;
+  cy[0] = height/2;
+  var ringRadius = 220;
+  var theta = 4*Math.PI;
+
+  for (var i = 1; i < 188; i++){
+    var angle = i/188 * theta;
+    var y = (ringRadius * i/188) * Math.sin(angle);
+    var x = (ringRadius *i/188)* Math.cos(angle);
+    cx[i] = x + cx[0];
+    cy[i] = y + cy[0];
+  }
+
+  // ringRadius = 150;
+  // for (var i = 30; i < 188; i++){
+  //   var angle = i/157 * theta;
+  //   var y = ringRadius * Math.sin(angle);
+  //   var x = ringRadius * Math.cos(angle);
+  //   cx[i] = x + cx[0];
+  //   cy[i] = y + cy[0];
+  // }
+};
+
+
 // sort by category and assign id
 var sortAndAssignId = function(collection, category) {
   collection.sort(function(a,b){
@@ -229,6 +255,7 @@ d3.select('#scatterData')
     .transition()
     .duration(1500)
     .attr({
+      r: radius,
       cx: function(d){
         var cx = Math.random() * width;
         if ((cx + radius) > width) {
@@ -249,17 +276,19 @@ d3.select('#scatterData')
 d3.select('#groupData')
   .on('click', function(){
     d3.select('#instructions').text('Click on the circles to drag out countries');
+    sortedTotalCircles = sortAndAssignId(sortedCircles, 'Total');
+    createSpiralPositions(cxPosTotal, cyPosTotal);
     d3.selectAll('circle')
     .transition()
     .duration(1500)
     .attr({
-      r: function(d){return radius;},
+      r: function(d){return 25;},
       cx: function(d){
-        var x = width/2;
-        return x;
+        console.log(cxPosTotal[d.id]);
+        return cxPosTotal[d.id];
       },
       cy: function(d){
-        return height/2;
+        return cyPosTotal[d.id];
       },
       fill: function(d){return circleColor(d);},
       stroke: 'white'
@@ -286,6 +315,7 @@ d3.select('#totalData')
       cx: function(d){ return cxPosTotal[d.id];}
     });
   });
+
 
 d3.select('#wineData')
   .on('click', function(){
