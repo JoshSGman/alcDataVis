@@ -41,6 +41,7 @@ svg {
 
 #legend{
   text-align: center;
+  background-color: white;
   top: 100px;
   padding: 5px;
   position: absolute;
@@ -69,7 +70,7 @@ svg {
   margin-right: 40px;
 }
 
-#groupData {
+#spiralData {
   margin-top: 10px;
   font-size: 1.25em;
   background-color: lightblue;

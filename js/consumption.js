@@ -87,7 +87,7 @@ var createSpiralPositions = function(cx, cy, sortedCirc) {
   cx[0] = width/2;
   cy[0] = height/2;
   var ringRadius = 220;
-  var theta = 4*Math.PI;
+  var theta = 8*Math.PI;
 
   for (var i = 1; i < 188; i++){
     var angle = i/188 * theta;
@@ -96,15 +96,6 @@ var createSpiralPositions = function(cx, cy, sortedCirc) {
     cx[i] = x + cx[0];
     cy[i] = y + cy[0];
   }
-
-  // ringRadius = 150;
-  // for (var i = 30; i < 188; i++){
-  //   var angle = i/157 * theta;
-  //   var y = ringRadius * Math.sin(angle);
-  //   var x = ringRadius * Math.cos(angle);
-  //   cx[i] = x + cx[0];
-  //   cy[i] = y + cy[0];
-  // }
 };
 
 
@@ -177,21 +168,26 @@ d3.csv("js/AlcoholConsumptionByCountry.csv", function(csv){
       return b.Total - a.Total;
     });
     circles.enter().append('circle').attr({
-      r: 0,
+      r: 5,
       cx: function(){ return Math.random() * width;},
       cy: function(){ return Math.random() * height;},
       fill: 'white'
-    })
+    });
+
+    //Grab the circles collection
+    sortedCircles = d3.selectAll('circle');
+    sortedTotalCircles = sortAndAssignId(sortedCircles, 'Total');
+    createSpiralPositions(cxPosTotal, cyPosTotal);
+    sortedCircles
     .transition()
-    .duration(500)
+    .duration(4000)
     .attr({
       r: function(d){return radius;},
       cx: function(d){
-        var x = width/2;
-        return x;
+        return cxPosTotal[d.id];
       },
       cy: function(d){
-        return height/2;
+        return cyPosTotal[d.id];
       },
       fill: function(d){return circleColor(d);},
       stroke: 'white'
@@ -199,8 +195,8 @@ d3.csv("js/AlcoholConsumptionByCountry.csv", function(csv){
     // call drag on data-circles
     d3.selectAll('circle').call(drag);
     d3.select('#instructions').text('Click on the circles to drag out countries');
-    //Grab the circles collection
-    sortedCircles = d3.selectAll('circle');
+   
+    
 
 
 
@@ -273,7 +269,7 @@ d3.select('#scatterData')
 
 
 // organize data-circles on click
-d3.select('#groupData')
+d3.select('#spiralData')
   .on('click', function(){
     d3.select('#instructions').text('Click on the circles to drag out countries');
     sortedTotalCircles = sortAndAssignId(sortedCircles, 'Total');
@@ -282,7 +278,7 @@ d3.select('#groupData')
     .transition()
     .duration(1500)
     .attr({
-      r: function(d){return 25;},
+      r: function(d){return radius;},
       cx: function(d){
         console.log(cxPosTotal[d.id]);
         return cxPosTotal[d.id];
