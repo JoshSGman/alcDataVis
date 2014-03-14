@@ -229,7 +229,7 @@ d3.select('#scatterData')
     .transition()
     .duration(1500)
     .attr({
-      cx: function(d){ 
+      cx: function(d){
         var cx = Math.random() * width;
         if ((cx + radius) > width) {
           cx = cx - (radius*2);
@@ -238,8 +238,8 @@ d3.select('#scatterData')
         }
         return cx;
         },
-      cy: function(){ 
-        return Math.random() * height
+      cy: function(){
+        return Math.random() * height;
         }
     });
   });
